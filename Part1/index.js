@@ -12,6 +12,11 @@ function play(number) {
     let player = document.getElementById('player');
     let box = document.getElementById(number);
 
+
+    if (document.getElementById(number).innerText === 'X' || document.getElementById(number).innerText === 'O') {
+      return;
+    }
+
     box.innerText = player.innerText;
 
     board[number] = player.innerText;
